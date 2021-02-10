@@ -395,7 +395,7 @@ z-index: 9;
 
 .section-4{
     width: 100%;
-    height: 35vh;
+    height: 30vh;
     background-color: #222;
     display: flex;
     justify-content: space-around;
@@ -585,7 +585,7 @@ z-index: 9;
         margin: 0 0.4rem;
     }
     .section-4{
-        heigth: 20vh;
+        heigth: 15vh;
     }
     .section-1-icons i{
         font-size: 30rem;
