@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/********************************START-Common Styles **********************************/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    /* overflow-x: hidden; */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.section-heading {
+    font-size: 10rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+}
+
+/************************************END-Common Styles********************************/
+
+
+
+
+/****************************************START-NAVBAR********************************/
+
+.navbar{
+    width: 100%;
+    height: 12rem;
+    background-color: black;
+    position: fixed;
+    top: -12rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .2rem .2rem .2rem black;
+    transition: top .4s  ;
+
+}
+.navbar.change{
+    top: 0;
+    transition: top .4s .2s;
+}
+.navbar-link{
+    color: #aaa;
+    margin: 0 4rem;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    transition: color .3s, opacity .2s;
+}
+.navbar-link i{
+    font-size: 5rem;   
+}
+.navbar.change .navbar-link{
+    opacity: 1;
+}
+.navbar.change .navbar-link:nth-child(1){
+    transition: opacity .4s .5s, color .3s;
+
+}
+.navbar.change .navbar-link:nth-child(2){
+    transition: opacity .4s .6s, color .3s;
+
+}
+.navbar.change .navbar-link:nth-child(3){
+    transition: opacity .4s .6s, color .3s;
+
+}
+.navbar.change .navbar-link:nth-child(4){
+    transition: opacity .4s .7s, color .3s;
+
+}
+.navbar.change .navbar-link:nth-child(5){
+    transition: opacity .4s .8s, color .3s;
+
+}
+
+.navbar-link:hover{
+    color: white;
+}
+.navbar-link span{
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-top: .5rem;
+
+}
+.menue{
+position: fixed;
+width:4rem;
+height: 6rem;
+top: 2rem;
+background-color: black;
+left: 4rem;
+border-radius: 30rem 30rem 15rem 15rem;
+box-shadow: .1rem .1rem .1rem black, -.1rem -.1rem .1rem black;
+transition: top .4s .2s;
+z-index: 9;
+}
+
+.menue.change{
+    top: 14rem;
+    transition:top .4s ;
+
+}
+.menue::before{
+    content: "";
+    position: absolute;
+    width: 0.4rem;
+    height: 14rem;
+    background-color: black;
+    top: -14rem;
+    left: calc(50% - .20rem);
+    box-shadow: .1rem .1rem .1rem black;
+}
+/************************************END-START-NAVBAR********************************/
+
+
+
+
+
+/******************************START-Section--1 **************************************/
+
+
+.section-1 {
+    width: 100%;
+    height: 110vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-1-icons i {
+    font-size: 30rem;
+    color: #a79a2d;
+    text-shadow: 0.2rem 0.2rem 0.2rem black;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s;
+}
+
+.section-1-icons i.change {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s 0.3s;
+}
+
+/***************************************End-Section--1 ********************************/
+
+
+
+/***************************************START-SECTION-2  *****************************/
+
+.section-2 {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    background-color: #222;
+    flex-direction: column;
+    padding: 5rem 0;
+    justify-content: space-around;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    background-color: #a79a2d;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    box-shadow: 1rem 1rem 1rem black;
+    position: relative;
+    transform: rotatey(20deg) skewX(-2deg);
+    transition: transform .5s, box-shadow .5s;
+}
+
+.card:hover {
+    transform: rotatey(20deg) skewX(-2deg) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem black;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1rem;
+    background-color: #817824;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: -.1rem -1rem 1em black;
+
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 100%;
+    background-color: #8f8317;
+    top: -1rem;
+    left: 0;
+    transform: skewx(45deg);
+    transform-origin: bottom;
+    box-shadow: -.1rem -.1rem .1rem black;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-name {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #111;
+    text-shadow: .15rem .15rem .15rem black;
+}
+
+.card-btn {
+    width: 70%;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    box-shadow: -.2rem -.2rem .2rem black;
+    text-transform: capitalize;
+
+}
+
+/**********************************END--START-SECTION-2  *****************************/
+
+
+
+
+/***************************************START-SECTION-2  *****************************/
+
+
+.section-3 {
+    background-color: #333;
+    padding: 4rem 0;
+}
+
+.food-img {
+    width: 24vw;
+    height: 27vh;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .1rem #e92929, .5rem .5rem .1rem #a2e946, .7rem .7rem .1rem #297ce9, .9rem .9rem .1rem #a2a89d;
+    transition: all 0.5s;
+
+
+}
+
+.gallery-link:hover .food-img {
+    box-shadow: 1rem 1rem .1rem #e92929, 2rem 2rem .1rem #a2e946, 3rem 3rem .1rem #297ce9, 4rem 4rem .1rem #a2a89d;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+
+}
+
+.gallery-link {
+    position: relative;
+    margin: 4rem 1rem;
+
+}
+
+.gallery-link::before {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0;
+    background-color: white;
+    top: 2vh;
+    left: 80%;
+    transition: height .5s;
+    z-index: 2;
+
+
+}
+
+.gallery-link:hover::before {
+    height: 80%;
+    transition: height .5s;
+}
+
+.gallery-link::after {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    width: 0;
+    background-color: white;
+    top: 30%;
+    left: 2rem;
+    transition: width .5s;
+
+}
+
+.gallery-link:hover::after {
+    width: 80%;
+    transition: width .5s;
+}
+
+.food-name {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: white;
+    text-shadow: .4rem .4rem .4rem black;
+    text-transform: uppercase;
+    width: 0;
+    overflow: hidden;
+    transition: width .5s;
+
+}
+
+.gallery-link:hover .food-name {
+    width: 100%;
+    transition: width 1.5s .5s;
+}
+
+.food-description {
+    position: absolute;
+    bottom: 3vh;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: .2rem .2rem .2rem black;
+    opacity: 0;
+    transition: opacity .5s;
+  
+
+
+}
+
+.gallery-link:hover .food-description {
+    opacity: 1;
+    transition: opacity 1s 0.8s;
+   
+
+
+}
+
+
+/**********************************END--START-SECTION-3  *****************************/
+
+
+
+/***************************************START-SECTION-4  *****************************/
+
+.section-4{
+    width: 100%;
+    height: 35vh;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3rem 0;
+    position: relative;
+}
+.section-4-text{
+    text-transform: uppercase;
+    
+
+}
+.section-4-heading{
+    font-size: 4rem;
+    font-weight: 900;
+    color:#a79a2d ;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    
+ 
+}
+.section-4-paragraph{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    text-shadow: .2rem .2rem .2rem black;
+
+}
+.signup-form{
+    display: flex;
+    align-items: center;
+}
+.sign-up-input{
+    width: 35rem;
+    height: 5rem;
+    padding: 1rem;
+    border: 0.2rem solid #a79a2d;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    color: #a79a2d;
+    font-weight: 600;
+
+}
+.sign-up-input::placeholder{
+    color: #a79a2d;
+}
+
+.sign-up-btn{
+    position: relative;
+    left: -4.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #333;
+    color:#a79a2d ;
+    border: none;
+    font-size:1.8rem ;
+    cursor: pointer;
+}
+.copyright{
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #eee ;
+    letter-spacing: .1rem;
+    border-top: .1rem solid #888;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+    text-shadow: .2rem .2rem .2rem black;
+}
+/**********************************END--START-SECTION-4  *****************************/
+
+
+/**********************************START---RESPONSIVE  *****************************/
+
+@media(max-width:1400px){
+    html{
+        font-size: 50%;
+    }
+    .section-2{
+        height: auto;
+        padding: 10rem 0;
+    }
+    .card-container{
+        margin-top: 10rem;
+    }
+    .gallery-link{
+        width: 40rem;
+        height: 25rem;
+        margin: 3rem 3rem 3rem 3rem;
+    }
+    .food-img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width:1000px){
+    .section-heading{
+        font-size:9rem ;
+        margin: 0 5rem;
+    }
+    .section-1-icons i{
+        font-size: 25rem;
+    }
+    .card-container{
+        flex-wrap: wrap;
+    }
+    .card{
+        margin: 5rem;
+    }
+    .navbar-link i{
+        font-size: 4rem;
+    }
+    .navbar-link span{
+        font-size: 2rem;
+    }
+}
+@media (max-width:700px){
+    .section-heading{
+        font-size: 7rem;
+        margin: 0;
+    }
+    .section-1-icons i{
+        font-size: 20rem;
+    }
+    .navbar-link i{
+        font-size: 3rem;
+    }
+    .navbar-link{
+        margin: 0 1rem;
+    }
+    .navbar-link span{
+        font-size: 1.8;
+    }
+.menue{
+    left: 2rem;
+}
+.section-4{
+    height: 20vh;
+}
+.section-4-heading{
+    font-size: 2.6rem;
+}
+.section-4-paragraph{
+    font-size: 1rem;
+}
+.copyright{
+    font-size: 1rem;
+}
+.sign-up-input{
+    width: 25rem;
+}
+
+}
+@media(max-width:500px){
+    html{
+        font-size: 40%;
+    }
+    .gallery{
+    align-items: stretch;
+    }
+    .gallery-link{
+        margin: 3rem 0;
+        width: 50rem;
+        height: 30rem;
+    }
+    .food-img{
+        height: 100%;
+        width: 100%;
+       }
+       .card{
+           width: 35rem;
+       }
+       .section-4-heading{
+           font-size: 6rem;
+           margin: 0 0.8rem;
+       }
+       .section-4-heading{
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+}
+/**********************************END---RESPONSIVE********************************/
