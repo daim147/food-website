@@ -521,7 +521,7 @@ z-index: 9;
         margin: 0;
     }
     .section-1-icons i{
-        font-size: 20rem;
+        font-size: 25rem;
     }
     .navbar-link i{
         font-size: 3rem;
@@ -586,6 +586,9 @@ z-index: 9;
     .section-heading{
         font-size: 6rem;
         margin: 0 0.4rem;
+    }
+    .section-4{
+        heigth:25vh;
     }
     
 /**********************************END---RESPONSIVE********************************/
