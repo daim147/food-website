@@ -362,10 +362,10 @@ z-index: 9;
 
 .food-description {
     position: absolute;
-    bottom: 3vh;
+    bottom: 6vh;
     left: 2rem;
     width: 70%;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: .1rem;
     text-transform: uppercase;
