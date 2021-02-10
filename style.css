@@ -583,4 +583,9 @@ z-index: 9;
         height:80vh;
 
 }
+    .section-heading{
+        font-size: 6rem;
+        margin: 0 0.4rem;
+    }
+    
 /**********************************END---RESPONSIVE********************************/
